@@ -1,0 +1,45 @@
+{
+  "_help": "Personal knowledge base. Every list item can be a plain string (treated as public) or an object {\"text\": \"...\", \"access\": \"public|private|internal\"}. See README.md for details.",
+  "version": 1,
+
+  "profile": {
+    "education": [],
+    "work_experience": [],
+    "skills": [],
+    "places": [],
+    "languages": [],
+    "interests": [
+      "Technology",
+      "AI",
+      "Cybersecurity",
+      "Business",
+      "Entrepreneurship",
+      "Cars",
+      "Gaming",
+      "Fitness",
+      "Finance",
+      "Programming"
+    ]
+  },
+
+  "projects": [
+    {
+      "id": "proj_ai_version_of_me",
+      "name": "AI Version of Me",
+      "description": "A Discord bot that acts as an AI representation of Kobe.",
+      "status": "in progress",
+      "goals": ["Get a working Discord version first", "Later expand to web, mobile and voice"],
+      "technologies": ["Node.js", "JavaScript", "discord.js"],
+      "decisions": ["Started with a JSON memory file to keep v1 simple"],
+      "future_plans": ["Swap JSON for a real database", "Add a vector database for smarter memory search"],
+      "access": "public"
+    }
+  ],
+
+  "goals": {
+    "short_term": [],
+    "long_term": []
+  },
+
+  "memories": []
+}

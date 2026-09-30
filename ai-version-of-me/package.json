@@ -1,0 +1,17 @@
+{
+  "name": "ai-version-of-me",
+  "version": "1.0.0",
+  "description": "A Discord bot that acts as an AI representation of its creator.",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^14.16.3",
+    "dotenv": "^16.4.5"
+  }
+}
