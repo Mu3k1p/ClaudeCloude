@@ -22,7 +22,9 @@ class AIClient {
     this.format = (env.AI_API_FORMAT || 'chat_completions').trim().toLowerCase();
     this.authHeader = env.AI_AUTH_HEADER || 'Authorization';
     // Note: an empty AI_AUTH_PREFIX is allowed (for "x-api-key" style headers)
-    this.authPrefix = env.AI_AUTH_PREFIX !== undefined ? env.AI_AUTH_PREFIX : 'Bearer ';
+    // .env files trim trailing spaces, so "Bearer " arrives as "Bearer". Add the space back.
+    const prefix = env.AI_AUTH_PREFIX !== undefined ? env.AI_AUTH_PREFIX.trim() : 'Bearer';
+    this.authPrefix = prefix ? prefix + ' ' : '';
     this.maxTokens = Number(env.AI_MAX_TOKENS) || 700;
     this.temperature = env.AI_TEMPERATURE !== undefined && env.AI_TEMPERATURE !== '' ? Number(env.AI_TEMPERATURE) : 0.7;
     this.timeoutMs = Number(env.AI_TIMEOUT_MS) || 60000;
